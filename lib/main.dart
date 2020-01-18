@@ -113,6 +113,7 @@ class _MyHomePageState extends State<MyHomePage> {
     var iOSPlatformChannelSpecifics = new IOSNotificationDetails();
     var platformChannelSpecifics = new NotificationDetails(
         androidPlatformChannelSpecifics, iOSPlatformChannelSpecifics);
+
     await flutterLocalNotificationsPlugin.show(
       0,
       message['notification']['title'],
@@ -197,13 +198,15 @@ class _MyHomePageState extends State<MyHomePage> {
                     children: [
                       Text(
                         lastMessageTitle.isEmpty
-                            ? "The last notification you receive will be shown here."
+                            ? "The last notification you receive will be shown here"
                             : lastMessageTitle,
                         style: TextStyle(
                             fontSize: 20.0, fontWeight: FontWeight.bold),
                       ),
                       Text(
-                        lastMessageBody,
+                        lastMessageBody.isEmpty
+                            ? "You received no notifications yet."
+                            : lastMessageBody,
                         style: TextStyle(
                           fontSize: 20.0,
                         ),

@@ -26,6 +26,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: MyHomePage(title: 'ML Notifier'),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
@@ -96,6 +97,7 @@ class _MyHomePageState extends State<MyHomePage> {
       assert(token != null);
       print(token);
       firebaseToken = token;
+      setState(() => {});
     });
   }
 
@@ -194,7 +196,9 @@ class _MyHomePageState extends State<MyHomePage> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        lastMessageTitle,
+                        lastMessageTitle.isEmpty
+                            ? "The last notification you receive will be shown here."
+                            : lastMessageTitle,
                         style: TextStyle(
                             fontSize: 20.0, fontWeight: FontWeight.bold),
                       ),

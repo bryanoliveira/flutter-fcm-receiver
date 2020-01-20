@@ -105,8 +105,6 @@ class _MyHomePageState extends State<MyHomePage> {
     lastMessageTitle = message['notification']['title'];
     lastMessageBody = message['notification']['body'];
 
-    await flutterLocalNotificationsPlugin.cancelAll();
-
     var androidPlatformChannelSpecifics = new AndroidNotificationDetails(
         'mlnotifier.updates', 'ML Updates', 'Updates about your ML training',
         importance: Importance.Min, priority: Priority.Min);
@@ -114,6 +112,7 @@ class _MyHomePageState extends State<MyHomePage> {
     var platformChannelSpecifics = new NotificationDetails(
         androidPlatformChannelSpecifics, iOSPlatformChannelSpecifics);
 
+    await flutterLocalNotificationsPlugin.cancel(0);
     await flutterLocalNotificationsPlugin.show(
       0,
       message['notification']['title'],

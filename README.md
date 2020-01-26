@@ -26,6 +26,7 @@ The main motivation is that monitoring machine learning models' training status 
 This app (and [Python package](https://github.com/bryanlincoln/fcm-notifier)) are far from complete. There are some ways I imagine they could be better:
 
 -   Saving historic data, when new notifications arise
+-   Plotting charts with historic data
 -   Automatic device token synchronization between phone and reporter machine
 -   Easier project configuration, using some service other than Firebase.
 

@@ -2,9 +2,7 @@
 
 A Flutter app to receive Firebase Cloud Messaging notifications. It was built to be used with [Firebase Cloud Messaging Notifier](https://github.com/bryanlincoln/fcm-notifier), a package I made to notify about Machine Learning models training status.
 
-<img src="docs/app.jpg" width="250" height="200">
-<img src="docs/notification.jpg" width="230" height="200">
-<img src="docs/smartband.jpg" width="180" height="200">
+<img src="docs/app.jpg" width="290" height="230"> <img src="docs/notification.jpg" width="260" height="230"> <img src="docs/smartband.jpg" width="250" height="230">
 
 > App's view (left), notification center (center) and smartband (right). This is the way I use it.
 
@@ -35,4 +33,4 @@ Fell free to fork this project and improve it for your needs.
 
 ## Credits
 
--   [Flutter FCM](https://github.com/Kashifalaliwala/Flutter-FCM) was used as a starting point to notification handling.
+-   [Flutter FCM](https://github.com/Kashifalaliwala/Flutter-FCM) was used as a starting point for notification handling.
